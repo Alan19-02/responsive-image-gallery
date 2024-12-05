@@ -1,0 +1,58 @@
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  background-color: var(
+    --background-color
+  ); /* Ensure container background follows theme */
+  transition: background-color 0.3s ease;
+}
+
+/* Gallery Item */
+.gallery-item {
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.3s ease; /* Transition for border color */
+}
+
+/* Image Styles */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 4px solid var(--image-border-color); /* Border color based on theme */
+}
+
+/* Hover Effect */
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Active Effect */
+.gallery-item:active {
+  transform: scale(0.95);
+}
+
+/* Dark Mode Specific Styles */
+[data-theme="dark"] .gallery-container {
+  background-color: #333; /* Dark background for gallery container */
+}
+
+/* Dark Mode Image Styles */
+[data-theme="dark"] .gallery-item img {
+  filter: brightness(0.8); /* Slightly darken images for better contrast */
+  border-color: #666; /* Darker border color in dark mode */
+}
+
+/* Light Mode Specific Styles */
+[data-theme="light"] .gallery-container {
+  background-color: #fff; /* Light background for gallery container */
+}
+
+/* Light Mode Image Styles */
+[data-theme="light"] .gallery-item img {
+  filter: brightness(1); /* Keep images bright in light mode */
+  border-color: #ddd; /* Lighter border color in light mode */
+}
