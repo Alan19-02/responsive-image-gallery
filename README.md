@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+[LINK TO THE HOSTED PROJECT](https://alan19-02.github.io/responsive-image-gallery/)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
